@@ -5,12 +5,18 @@
 
 def count_file_lines():
     ######################
-    # Add your code here #
+try:  
+    with open(file_path, 'r') as file:  
+        lines = file.readlines()  
+        print(f"Names stored in file: {len(lines)}")
+except FileNotFoundError:
+    print("The file was not found.")
     ######################
-    print('In the count_file_lines function')
 
 
 
 # You don't need to change anything below this line:
 if __name__ == '__main__':
     count_file_lines()
+
+#Jadon Anderstrom, 10/31/2024, "Item Counter"
